@@ -23,6 +23,10 @@ COPY . ./
 # Generate autoloader
 RUN composer dump-autoload --optimize
 
+# Create cache and log directories with proper permissions
+RUN mkdir -p var/cache var/log && \
+    chmod -R 777 var
+
 EXPOSE 8000
 
 CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]

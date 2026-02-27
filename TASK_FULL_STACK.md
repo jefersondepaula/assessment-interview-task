@@ -30,6 +30,8 @@ Review the database schema (`backend/migrations/001_init_and_seed.sql`) and enti
    - Expected: 2/4 questions answered, 53.85% score
 4. Add error handling where missing
 
+**Deliverable:** Notes in SOLUTION.md explaining the scoring algorithm and any error handling you added.
+
 ## Phase 3: Implement Answer Submission (1-1.5 hours)
 
 **Create POST endpoint:** `POST /api/assessment/answers`
@@ -70,6 +72,8 @@ curl -X POST http://localhost:8002/api/assessment/answers \
 # Verify score updates (53.85% → 75%)
 curl http://localhost:8002/api/assessment/results/d1111111-1111-1111-1111-111111111111
 ```
+
+**Deliverable:** Working POST endpoint with validation, error handling, and test results documented in SOLUTION.md.
 
 ## Getting Started
 

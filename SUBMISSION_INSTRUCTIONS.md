@@ -1,110 +1,110 @@
 # Submission Instructions
 
-Thank you for taking the time to complete this technical assessment.
+## Quick Checklist
 
-## Time Limit
+Before submitting, make sure you have:
 
-**2-3 hours** (setup time doesn't count toward this limit)
+- [ ] Completed your specific task (TASK_FULL_STACK.md or TASK_FRONTEND.md)
+- [ ] Created a `SOLUTION.md` file in the root of your repository
+- [ ] Committed and pushed all your code to your repository
+- [ ] Tested your implementation works as expected
 
-## Your Task
+## SOLUTION.md Template
 
-Choose the appropriate task based on the role you're applying for:
+Your `SOLUTION.md` should include:
 
-- **Backend/Full-Stack Role:** Complete [TASK_FULL_STACK.md](TASK_FULL_STACK.md)
-- **Frontend Role:** Complete [TASK_FRONTEND.md](TASK_FRONTEND.md)
+```markdown
+# Solution - [Your Name]
 
-## Getting Started
+## Task Completed
+[Backend/Full-Stack or Frontend]
 
-### 1. Create Your Repository
+## Time Spent
+[Approximate hours]
 
-Click the **"Use this template"** button at the top of this page, then:
-- Click "Create a new repository"
-- Name it whatever you like (e.g., "assessment-submission")
-- Choose public or private (your choice)
-- Click "Create repository"
+## Approach
+[Explain your overall approach and strategy]
 
-Your repository will be an independent copy - other candidates cannot find it through this template.
+## Implementation Details
+[Describe what you built and key decisions you made]
 
-### 2. Set Up the Project
+## Tools & Libraries Used
+- [List any libraries/packages you added]
+- AI tools used: [ChatGPT, Claude, Copilot, none, etc.]
+  - [Briefly explain how you used them if applicable]
 
-Follow the setup instructions in [SETUP_GUIDE.md](SETUP_GUIDE.md):
+## Testing
+[Explain how to test your implementation]
+[Include curl commands, URLs, or test scenarios]
 
-```bash
-git clone <your-new-repo-url>
-cd <your-repo-name>
-docker-compose up -d
+## Challenges & Solutions
+[Describe any difficulties and how you overcame them]
+
+## Trade-offs & Future Improvements
+[What would you do differently with more time?]
 ```
 
-Verify everything works:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8002
+**Important:** All written explanations must be your own work, not AI-generated.
 
-**Note:** Setup time doesn't count toward the 2-3 hour limit. Start your timer once the project is running.
+## How to Submit
 
-### 3. Complete the Assessment
+### If Your Repository is Public:
 
-1. Read your task file carefully (TASK_FULL_STACK.md or TASK_FRONTEND.md)
-2. Follow the phases in order
-3. Commit your work regularly (we like to see your process)
-4. Create a `SOLUTION.md` file explaining:
-   - Your approach
-   - Design decisions
-   - Tools/libraries used (including AI tools if any)
-   - Testing steps
-   - Challenges faced and how you solved them
-
-## Submission
-
-### If Your Repo is Public:
-
-Simply email us with:
+Email us with:
 - Your repository URL
 - Your name
 - The role you're applying for
 
-### If Your Repo is Private:
+### If Your Repository is Private:
 
-1. Go to your repo Settings → Collaborators
+1. Go to your repository Settings → Collaborators
 2. Click "Add people"
-3. Add: **[interviewer-github-username]**
+3. Add: odvarkadebe
 4. Email us with:
    - Your repository URL
    - Your name
    - The role you're applying for
    - Confirmation that you've added us as a collaborator
 
-## What We're Looking For
+## Email Template
 
-- **Understanding** - Do you grasp the existing architecture?
-- **Implementation** - Does your code work and follow good practices?
-- **Problem Solving** - How do you approach challenges?
-- **Communication** - Can you explain your decisions clearly?
+```
+Subject: Assessment Submission - [Your Name]
 
-## Rules & Guidelines
+Hi,
 
-✅ **Allowed:**
-- Use the internet, documentation, Stack Overflow
-- Use AI tools (ChatGPT, Claude, Copilot, etc.) - just mention which ones in SOLUTION.md
-- Ask us clarifying questions via email
+I've completed the technical assessment for the [Fronte-end/Full-stack] position.
 
-❌ **Not Allowed:**
-- Copying solutions from other candidates
-- Having someone else complete it for you
-- AI-generated explanations in SOLUTION.md (code is fine, explanations must be yours)
+Repository: [your-repo-url]
+Time spent: [approximate hours]
+
+[If private: I've added odvarkadebe as a collaborator]
+
+Looking forward to discussing my solution with you.
+
+Best regards,
+[Your Name]
+```
+
+## Deadline
+
+**4/3/2026**
+
+Please submit even if incomplete. We'd rather see partial work with good explanations than nothing at all.
+If you can't complete the task by the deadline, please reach out and we can find some solution.
+
+## What We Evaluate
+
+- **Code Quality** - Clean, readable, follows best practices
+- **Functionality** - Does it work as specified?
+- **Problem Solving** - How did you approach challenges?
+- **Communication** - Can you clearly explain your decisions in SOLUTION.md?
+- **Understanding** - Do you understand the existing architecture?
 
 ## Questions?
 
-If you have questions about:
-- **Setup issues:** See [SETUP_GUIDE.md](SETUP_GUIDE.md) troubleshooting section
-- **Task requirements:** Email us - we're happy to clarify!
-- **Submission process:** Email us
-
-## Timeline
-
-**Deadline:** [INSERT DEADLINE HERE]
-
-Please submit even if incomplete. We'd rather see partial work with good explanations than nothing at all.
+If you have any questions about the submission process, feel free to email us.
 
 ---
 
-Good luck! We're excited to see what you build.
+Good luck!

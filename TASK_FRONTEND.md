@@ -42,6 +42,8 @@ Create a wireframe showing:
 - Use accessible colors
 - Add clear labels and legends
 
+**Deliverable:** Working components displaying question breakdown and at least one chart/visualization.
+
 ## Phase 3: UX Enhancements (45-60 min)
 
 **Choose and implement at least 2:**
@@ -58,6 +60,8 @@ Create a wireframe showing:
 - Consistent design
 - Professional polish
 - Accessibility
+
+**Deliverable:** At least 2 UX enhancements implemented and documented in SOLUTION.md.
 
 ## Getting Started
 

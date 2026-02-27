@@ -6,8 +6,16 @@ vendor/
 .env
 .env.local
 
+
 # Build outputs
-/backend/var/
+/backend/var/*
+!/backend/var/.gitkeep
+!/backend/var/cache/
+!/backend/var/log/
+/backend/var/cache/*
+!/backend/var/cache/.gitkeep
+/backend/var/log/*
+!/backend/var/log/.gitkeep
 /backend/public/bundles/
 /frontend/dist/
 /frontend/build/
