@@ -15,8 +15,13 @@ class AssessmentService
 
     public function getAssessmentResults(AssessmentInstance $instance): array
     {
+        $session = $instance->getSession();
+        if (!$session || !$session->getAssessment()) {
+            throw new \RuntimeException('Assessment instance has no valid session or assessment.');
+        }
+
         $answers = $this->assessmentRepository->findAllAssessmentInstanceAnswers($instance);
-        $questions = $instance->getSession()->getAssessment()?->getQuestions()->toArray() ?? [];
+        $questions = $session->getAssessment()->getQuestions()->toArray();
 
         $progressData = $this->getProgressAndScore($instance);
 
@@ -58,9 +63,16 @@ class AssessmentService
 
     public function getProgressAndScore(AssessmentInstance $instance): array
     {
+        $session = $instance->getSession();
+        $assessment = $session ? $session->getAssessment() : null;
+
+        if (!$assessment) {
+            throw new \RuntimeException('Assessment instance has no valid session or assessment.');
+        }
+
         $answers = $this->assessmentRepository->findAllAssessmentInstanceAnswers($instance);
-        $questions = $instance->getSession()->getAssessment()?->getQuestions()->toArray() ?? [];
-        $assessmentElement = $instance->getSession()->getAssessment()?->getElement();
+        $questions = $assessment->getQuestions()->toArray();
+        $assessmentElement = $assessment->getElement();
 
         $totalQuestions = count($questions);
 
@@ -202,7 +214,7 @@ class AssessmentService
     private function generateInsights(AssessmentInstance $instance, array $answersByQuestion, array $questions): array
     {
         $insights = [];
-        $element = $instance->getSession()->getAssessment()->getElement();
+        $element = $instance->getSession()?->getAssessment()?->getElement() ?? 'unknown';
 
         // Basic completion insight
         $completionRate = count($answersByQuestion) / max(count($questions), 1);

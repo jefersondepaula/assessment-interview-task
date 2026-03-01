@@ -37,7 +37,13 @@ class AssessmentResultsController extends AbstractController
             ], Response::HTTP_NOT_FOUND);
         }
 
-        $results = $this->assessmentService->getAssessmentResults($instance);
+        try {
+            $results = $this->assessmentService->getAssessmentResults($instance);
+        } catch (\RuntimeException $e) {
+            return $this->json([
+                'error' => $e->getMessage()
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
 
         return $this->json($results);
     }
