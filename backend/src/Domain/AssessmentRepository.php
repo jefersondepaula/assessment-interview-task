@@ -44,4 +44,25 @@ class AssessmentRepository extends EntityRepository
 
         return $qb->getQuery()->getResult();
     }
+
+    public function findAssessmentQuestionById(string $id): ?AssessmentQuestion
+    {
+        return $this->getEntityManager()
+            ->getRepository(AssessmentQuestion::class)
+            ->find($id);
+    }
+
+    public function findAssessmentAnswerOptionById(string $id): ?AssessmentAnswerOption
+    {
+        return $this->getEntityManager()
+            ->getRepository(AssessmentAnswerOption::class)
+            ->find($id);
+    }
+
+    public function saveAnswer(AssessmentAnswer $answer): void
+    {
+        $em = $this->getEntityManager();
+        $em->persist($answer);
+        $em->flush();
+    }
 }
